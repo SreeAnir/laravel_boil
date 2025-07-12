@@ -11,3 +11,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/profile', [AuthController::class, 'profile']);
     Route::post('/logout', [AuthController::class, 'logout']);
 });
+
+Route::get('/test', function () {
+    return response()->json(['message' => 'Axios is working!']);
+});
